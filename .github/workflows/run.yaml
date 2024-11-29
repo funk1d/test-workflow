@@ -1,9 +1,12 @@
+# https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
 name: GitHub Actions Demo
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
 jobs:
   Explore-GitHub-Actions:
+    # https://docs.github.com/en/actions/writing-workflows/choosing-where-your-workflow-runs/choosing-the-runner-for-a-job#choosing-github-hosted-runners
     runs-on: ubuntu-latest
     steps:
       - name: Show Basic info
@@ -21,6 +24,7 @@ jobs:
       - name: Setup Go environment
         uses: actions/setup-go@v5
         with:
+          # https://github.com/marketplace/actions/setup-go-environment#using-stableoldstable-aliases
           go-version: 'stable'
       - run: |
           go version
