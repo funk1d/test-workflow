@@ -26,8 +26,6 @@ jobs:
         with:
           # https://github.com/marketplace/actions/setup-go-environment#using-stableoldstable-aliases
           go-version: 'stable'
-      - run: |
-          go version
         
       - name: List files in the repository
         run: |
